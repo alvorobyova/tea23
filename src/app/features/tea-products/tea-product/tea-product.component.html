@@ -1,0 +1,39 @@
+<div class="container-sm p-0">
+  <div class="collections my-5 mw-100">
+    <h1
+      class="collections__header fs-1 fw-bold text-center mb-4">{{teaProduct.title}}</h1>
+    <div class="row g-3">
+
+      <div class="col-12">
+        <div class="card mx-auto h-100 d-flex flex-row py-5">
+          <div
+            class="card-img d-flex flex-column justify-content-center align-items-center"
+            style="width: 40%">
+            <img class="bd-placeholder-img card-img-top"
+                 src="{{teaProduct.image}}"
+                 alt="Чай">
+            <div class="btn-group col-10 ">
+              <a class="btn btn-primary py-3 fw-bold"
+                 routerLink="/order"
+                 [queryParams]="{teaProduct: (teaProduct.title)}">Купить</a>
+              <span
+                class="btn border border-primary py-3 fw-bold">{{teaProduct.price}}
+                руб.</span>
+            </div>
+          </div>
+          <div class="card-body d-flex flex-column justify-content-center"
+               style="width: 60%">
+            <p class="card-text description pe-4">{{teaProduct.description}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="loading" class="loader-bg">
+      <div class="loader">
+
+      </div>
+    </div>
+  </div>
+</div>

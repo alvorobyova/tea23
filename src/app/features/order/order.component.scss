@@ -1,0 +1,27 @@
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border-color: #f3506d;
+}
+
+.invalid-message {
+  display: block;
+  color: #f3506d;
+  font-size: 12px;
+  font-style: italic;
+}
+
+textarea::placeholder {
+  font-size: 12px;
+  color: gray;
+}
+
+.success-window_container {
+  padding-top: 250px;
+}
+
+/* 576 - 992*/
+@media screen and (max-width: 1201px) {
+  .form-block {
+    width: 100%!important;
+  }
+}

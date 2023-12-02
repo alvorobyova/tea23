@@ -1,0 +1,33 @@
+.card-text.truncate {
+  -webkit-line-clamp: 10; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+}
+
+.card-text.header {
+  font-size: 18px!important;
+}
+
+
+/* 993 - 1200*/
+@media screen and (max-width: 1200px) {
+  .card-text.truncate, .btn {
+    font-size: 14px!important;
+  }
+
+  .btn {
+    padding: 10px 0!important;;
+  }
+
+  .card-text.header {
+    //font-size: 17px!important;
+  }
+}
+
+/* 993 - 1200*/
+@media screen and (max-width: 992px) {
+  .card-text.header {
+    font-size: 15px!important;
+  }
+}

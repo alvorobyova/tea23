@@ -1,0 +1,38 @@
+<div class="container-sm p-0">
+  <div class="slider my-5">
+    <div class="slide mw-100 position-relative">
+      <div class="slide-content position-absolute">
+        <h1 class="px-5 fw-bold">Закажи три пачки чая и получи подарок!</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-block my-5 w-75 mx-auto">
+    <p class="fs-2 text-center fw-bold mb-4">
+      Ответы на часто задаваемые вопросы
+    </p>
+    <div class="accordion" id="accordionExample">
+
+      <!--    ACCORDION COMPONENT-->
+      <accordion-item *ngFor="let accordionItem of accordionItems"
+                      [accordionItem]='accordionItem'></accordion-item>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div *ngIf="modalIsShow" class="modal d-flex bg-dark"
+       style="--bs-bg-opacity: .5;" id="staticBackdrop"
+       data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+       aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <p class="fs-4 fw-bold">Посмотрите наши чайные коллекции</p>
+          <a class="btn btn-primary" [routerLink]="'/catalog'">Смотреть</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

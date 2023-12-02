@@ -1,0 +1,12 @@
+<div class="collections my-5 mw-100" #catalog>
+  <h1 class="collections__header fs-1 fw-bold text-center mb-4">Наши чайные коллекции</h1>
+  <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3  g-3">
+    <tea-product-card *ngFor="let teaProduct of teaProducts" [teaProduct]='teaProduct'></tea-product-card>
+  </div>
+
+  <div *ngIf="loading" class="loader-bg">
+    <div class="loader">
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="accordion-item mb-4">
+  <h3 class="accordion-header" id="headingOne">
+    <button class="accordion-button collapsed rounded bg-primary text-light fw-bold border border-0 p-4"
+            type="button"
+            data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapseOne-' + accordionItem.id"
+            [attr.aria-expanded]="accordionItem.isActive"
+            (click)="toggleAccordionItem()"
+            [ngClass]="getButtonClasses()">
+      {{accordionItem.question}}
+    </button>
+  </h3>
+  <div id="collapseOne" [id]="'collapseOne-' + accordionItem.id" class="accordion-collapse collapse" aria-labelledby="headingOne"
+       data-bs-parent="#accordion" [ngClass]="{'show': accordionItem.isActive}">
+    <div class="accordion-body">
+      {{accordionItem.answer}}
+    </div>
+  </div>
+</div>

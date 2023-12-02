@@ -1,0 +1,12 @@
+.navbar-brand {
+  width: 50px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.nav-item a.active {
+  color: #0a53be;
+  font-weight: bold;
+}
